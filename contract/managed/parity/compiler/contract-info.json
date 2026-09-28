@@ -1,0 +1,622 @@
+{
+  "compiler-version": "0.31.1",
+  "language-version": "0.23.0",
+  "runtime-version": "0.16.0",
+  "circuits": [
+    {
+      "name": "organizerCommitment",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "secret",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "credentialCommitment",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "reportPeriod",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "secret",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "disputeNullifier",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "reportPeriod",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "secret",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "recordLeaf",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "record",
+          "type": {
+            "type-name": "Struct",
+            "name": "PayRecord",
+            "elements": [
+              {
+                "name": "present",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "woman",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "pay",
+                "type": {
+                  "type-name": "Uint",
+                  "maxval": 4294967295
+                }
+              },
+              {
+                "name": "salt",
+                "type": {
+                  "type-name": "Bytes",
+                  "length": 32
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "node",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "left",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "right",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "payrollRoot",
+      "pure": true,
+      "proof": false,
+      "arguments": [
+        {
+          "name": "records",
+          "type": {
+            "type-name": "Vector",
+            "length": 16,
+            "type": {
+              "type-name": "Struct",
+              "name": "PayRecord",
+              "elements": [
+                {
+                  "name": "present",
+                  "type": {
+                    "type-name": "Boolean"
+                  }
+                },
+                {
+                  "name": "woman",
+                  "type": {
+                    "type-name": "Boolean"
+                  }
+                },
+                {
+                  "name": "pay",
+                  "type": {
+                    "type-name": "Uint",
+                    "maxval": 4294967295
+                  }
+                },
+                {
+                  "name": "salt",
+                  "type": {
+                    "type-name": "Bytes",
+                    "length": 32
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "registerEmployees",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "batch",
+          "type": {
+            "type-name": "Vector",
+            "length": 16,
+            "type": {
+              "type-name": "Bytes",
+              "length": 32
+            }
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "commitCategory",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "category",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "root",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "openCheckWindow",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "fileDispute",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "kind",
+          "type": {
+            "type-name": "Enum",
+            "name": "DisputeKind",
+            "elements": [
+              "payAmount",
+              "category",
+              "gender",
+              "missing"
+            ]
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "resolveDispute",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "nullifier",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "closeCheckWindow",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "publishCategory",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "category",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    }
+  ],
+  "witnesses": [
+    {
+      "name": "organizerSecret",
+      "arguments": [
+      ],
+      "result type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "employeeSecret",
+      "arguments": [
+      ],
+      "result type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "credentialPath",
+      "arguments": [
+        {
+          "name": "leaf",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result type": {
+        "type-name": "Struct",
+        "name": "MerkleTreePath",
+        "elements": [
+          {
+            "name": "leaf",
+            "type": {
+              "type-name": "Bytes",
+              "length": 32
+            }
+          },
+          {
+            "name": "path",
+            "type": {
+              "type-name": "Vector",
+              "length": 10,
+              "type": {
+                "type-name": "Struct",
+                "name": "MerkleTreePathEntry",
+                "elements": [
+                  {
+                    "name": "sibling",
+                    "type": {
+                      "type-name": "Struct",
+                      "name": "MerkleTreeDigest",
+                      "elements": [
+                        {
+                          "name": "field",
+                          "type": {
+                            "type-name": "Field"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "goes_left",
+                    "type": {
+                      "type-name": "Boolean"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "categoryRecords",
+      "arguments": [
+        {
+          "name": "category",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result type": {
+        "type-name": "Vector",
+        "length": 16,
+        "type": {
+          "type-name": "Struct",
+          "name": "PayRecord",
+          "elements": [
+            {
+              "name": "present",
+              "type": {
+                "type-name": "Boolean"
+              }
+            },
+            {
+              "name": "woman",
+              "type": {
+                "type-name": "Boolean"
+              }
+            },
+            {
+              "name": "pay",
+              "type": {
+                "type-name": "Uint",
+                "maxval": 4294967295
+              }
+            },
+            {
+              "name": "salt",
+              "type": {
+                "type-name": "Bytes",
+                "length": 32
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "contracts": [
+  ],
+  "ledger": [
+    {
+      "name": "period",
+      "index": 0,
+      "exported": true,
+      "storage": "Cell",
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "organizer",
+      "index": 1,
+      "exported": true,
+      "storage": "Cell",
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "phase",
+      "index": 2,
+      "exported": true,
+      "storage": "Cell",
+      "type": {
+        "type-name": "Enum",
+        "name": "Phase",
+        "elements": [
+          "committing",
+          "checking",
+          "proving"
+        ]
+      }
+    },
+    {
+      "name": "employees",
+      "index": 3,
+      "exported": true,
+      "storage": "MerkleTree",
+      "depth": 10,
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "registered",
+      "index": 4,
+      "exported": true,
+      "storage": "Set",
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "payroll",
+      "index": 5,
+      "exported": true,
+      "storage": "Map",
+      "key": {
+        "type-name": "Bytes",
+        "length": 32
+      },
+      "value": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "disputes",
+      "index": 6,
+      "exported": true,
+      "storage": "Map",
+      "key": {
+        "type-name": "Bytes",
+        "length": 32
+      },
+      "value": {
+        "type-name": "Enum",
+        "name": "DisputeKind",
+        "elements": [
+          "payAmount",
+          "category",
+          "gender",
+          "missing"
+        ]
+      }
+    },
+    {
+      "name": "openDisputes",
+      "index": 7,
+      "exported": true,
+      "storage": "Set",
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    },
+    {
+      "name": "resolvedDisputes",
+      "index": 8,
+      "exported": true,
+      "storage": "Counter"
+    },
+    {
+      "name": "results",
+      "index": 9,
+      "exported": true,
+      "storage": "Map",
+      "key": {
+        "type-name": "Bytes",
+        "length": 32
+      },
+      "value": {
+        "type-name": "Struct",
+        "name": "CategoryResult",
+        "elements": [
+          {
+            "name": "women",
+            "type": {
+              "type-name": "Uint",
+              "maxval": 255
+            }
+          },
+          {
+            "name": "men",
+            "type": {
+              "type-name": "Uint",
+              "maxval": 255
+            }
+          },
+          {
+            "name": "womenPay",
+            "type": {
+              "type-name": "Uint",
+              "maxval": 18446744073709551615
+            }
+          },
+          {
+            "name": "menPay",
+            "type": {
+              "type-name": "Uint",
+              "maxval": 18446744073709551615
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "withheld",
+      "index": 10,
+      "exported": true,
+      "storage": "Set",
+      "type": {
+        "type-name": "Bytes",
+        "length": 32
+      }
+    }
+  ]
+}

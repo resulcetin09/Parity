@@ -1,0 +1,181 @@
+pragma language_version 0.23;
+
+import CompactStandardLibrary;
+
+// One deployment is one employer's pay-gap report for one period.
+//
+// 1. Commit: the organizer (HR) commits each category's payroll as the root of a
+//    16-slot Merkle tree of salted records, and registers each employee's
+//    anonymous credential commitment.
+// 2. Check: employees verify their own record off-chain against the committed
+//    root. An employee who finds an error files one anonymous dispute per
+//    period by proving they hold a registered credential.
+// 3. Prove: with no dispute open, the organizer publishes each category. The
+//    circuit recomputes the root from the private records, aggregates pay by
+//    gender and withholds any category with fewer than 5 women or 5 men.
+
+export enum Phase { committing, checking, proving }
+export enum DisputeKind { payAmount, category, gender, missing }
+
+export struct PayRecord {
+  present: Boolean,
+  woman: Boolean,
+  pay: Uint<32>,
+  salt: Bytes<32>
+}
+
+export struct CategoryResult {
+  women: Uint<8>,
+  men: Uint<8>,
+  womenPay: Uint<64>,
+  menPay: Uint<64>
+}
+
+export ledger period: Bytes<32>;
+export ledger organizer: Bytes<32>;
+export ledger phase: Phase;
+export ledger employees: MerkleTree<10, Bytes<32>>;
+export ledger registered: Set<Bytes<32>>;
+export ledger payroll: Map<Bytes<32>, Bytes<32>>;
+export ledger disputes: Map<Bytes<32>, DisputeKind>;
+export ledger openDisputes: Set<Bytes<32>>;
+export ledger resolvedDisputes: Counter;
+export ledger results: Map<Bytes<32>, CategoryResult>;
+export ledger withheld: Set<Bytes<32>>;
+
+witness organizerSecret(): Bytes<32>;
+witness employeeSecret(): Bytes<32>;
+witness credentialPath(leaf: Bytes<32>): MerkleTreePath<10, Bytes<32>>;
+witness categoryRecords(category: Bytes<32>): Vector<16, PayRecord>;
+
+constructor(reportPeriod: Bytes<32>, authority: Bytes<32>) {
+  period = disclose(reportPeriod);
+  organizer = disclose(authority);
+  phase = Phase.committing;
+}
+
+export pure circuit organizerCommitment(secret: Bytes<32>): Bytes<32> {
+  return persistentHash<Vector<2, Bytes<32>>>([pad(32, "parity:organizer:v1"), secret]);
+}
+
+export pure circuit credentialCommitment(reportPeriod: Bytes<32>, secret: Bytes<32>): Bytes<32> {
+  return persistentHash<Vector<3, Bytes<32>>>([pad(32, "parity:employee:v1"), reportPeriod, secret]);
+}
+
+export pure circuit disputeNullifier(reportPeriod: Bytes<32>, secret: Bytes<32>): Bytes<32> {
+  return persistentHash<Vector<3, Bytes<32>>>([pad(32, "parity:dispute:v1"), reportPeriod, secret]);
+}
+
+export pure circuit recordLeaf(record: PayRecord): Bytes<32> {
+  return persistentHash<PayRecord>(record);
+}
+
+export pure circuit node(left: Bytes<32>, right: Bytes<32>): Bytes<32> {
+  return persistentHash<Vector<2, Bytes<32>>>([left, right]);
+}
+
+pure circuit level8(v: Vector<16, Bytes<32>>): Vector<8, Bytes<32>> {
+  return [node(v[0], v[1]), node(v[2], v[3]), node(v[4], v[5]), node(v[6], v[7]),
+          node(v[8], v[9]), node(v[10], v[11]), node(v[12], v[13]), node(v[14], v[15])];
+}
+
+pure circuit level4(v: Vector<8, Bytes<32>>): Vector<4, Bytes<32>> {
+  return [node(v[0], v[1]), node(v[2], v[3]), node(v[4], v[5]), node(v[6], v[7])];
+}
+
+pure circuit level2(v: Vector<4, Bytes<32>>): Vector<2, Bytes<32>> {
+  return [node(v[0], v[1]), node(v[2], v[3])];
+}
+
+export pure circuit payrollRoot(records: Vector<16, PayRecord>): Bytes<32> {
+  const top = level2(level4(level8(map(recordLeaf, records))));
+  return node(top[0], top[1]);
+}
+
+circuit requireOrganizer(): [] {
+  assert(organizerCommitment(organizerSecret()) == organizer, "Organizer authorization required");
+}
+
+// Registers up to 16 employee credentials in one transaction. Unused slots are
+// all-zero and skipped.
+export circuit registerEmployees(batch: Vector<16, Bytes<32>>): [] {
+  requireOrganizer();
+  assert(phase == Phase.committing, "Employee registration is closed");
+  for (const commitment of batch) {
+    if (disclose(commitment) != default<Bytes<32>>) {
+      assert(!registered.member(disclose(commitment)), "Employee already registered");
+      employees.insert(disclose(commitment));
+      registered.insert(disclose(commitment));
+    }
+  }
+}
+
+// Allowed while committing and while employees check, so a disputed record
+// can be corrected. Every change is public: employees see the new root.
+export circuit commitCategory(category: Bytes<32>, root: Bytes<32>): [] {
+  requireOrganizer();
+  assert(phase != Phase.proving, "Payroll is frozen for proving");
+  payroll.insert(disclose(category), disclose(root));
+}
+
+export circuit openCheckWindow(): [] {
+  requireOrganizer();
+  assert(phase == Phase.committing, "The check window was already opened");
+  assert(!payroll.isEmpty(), "Commit at least one category first");
+  phase = Phase.checking;
+}
+
+export circuit fileDispute(kind: DisputeKind): Bytes<32> {
+  assert(phase == Phase.checking, "Disputes are only accepted while employees check");
+  const secret = employeeSecret();
+  const leaf = credentialCommitment(period, secret);
+  const path = credentialPath(leaf);
+  // Witness implementations are untrusted: bind the path to the caller's secret.
+  assert(path.leaf == leaf, "Credential path does not match employee");
+  assert(employees.checkRoot(disclose(merkleTreePathRoot<10, Bytes<32>>(path))), "Not a registered employee");
+  const nullifier = disputeNullifier(period, secret);
+  assert(!disputes.member(disclose(nullifier)), "Already disputed this report");
+  disputes.insert(disclose(nullifier), disclose(kind));
+  openDisputes.insert(disclose(nullifier));
+  return disclose(nullifier);
+}
+
+export circuit resolveDispute(nullifier: Bytes<32>): [] {
+  requireOrganizer();
+  assert(openDisputes.member(disclose(nullifier)), "No open dispute with this reference");
+  openDisputes.remove(disclose(nullifier));
+  resolvedDisputes.increment(1);
+}
+
+export circuit closeCheckWindow(): [] {
+  requireOrganizer();
+  assert(phase == Phase.checking, "The check window is not open");
+  assert(openDisputes.isEmpty(), "Resolve every open dispute first");
+  phase = Phase.proving;
+}
+
+export circuit publishCategory(category: Bytes<32>): [] {
+  requireOrganizer();
+  assert(phase == Phase.proving, "Close the check window before proving");
+  assert(payroll.member(disclose(category)), "Category was never committed");
+  assert(!results.member(disclose(category)) && !withheld.member(disclose(category)), "Category already published");
+  const records = categoryRecords(category);
+  assert(payrollRoot(records) == payroll.lookup(disclose(category)), "Records do not match the committed payroll");
+
+  const women = fold((acc: Uint<8>, r: PayRecord): Uint<8> =>
+    (r.present && r.woman ? acc + 1 : acc) as Uint<8>, 0 as Uint<8>, records);
+  const men = fold((acc: Uint<8>, r: PayRecord): Uint<8> =>
+    (r.present && !r.woman ? acc + 1 : acc) as Uint<8>, 0 as Uint<8>, records);
+  const womenPay = fold((acc: Uint<64>, r: PayRecord): Uint<64> =>
+    (r.present && r.woman ? acc + r.pay : acc) as Uint<64>, 0 as Uint<64>, records);
+  const menPay = fold((acc: Uint<64>, r: PayRecord): Uint<64> =>
+    (r.present && !r.woman ? acc + r.pay : acc) as Uint<64>, 0 as Uint<64>, records);
+
+  // Only the decision is disclosed when a group is too small; the counts and
+  // sums of a withheld category never leave the circuit.
+  if (disclose(women >= 5 && men >= 5)) {
+    results.insert(disclose(category), disclose(CategoryResult { women, men, womenPay, menPay }));
+  } else {
+    withheld.insert(disclose(category));
+  }
+}

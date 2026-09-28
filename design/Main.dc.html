@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parity: pay gaps, proven</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A0A0C;color:#EDE9E2;font-family:"Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:#E8A64A}
+::selection{background:rgba(232,166,74,0.35);color:#FFFFFF}
+a{color:#EDE9E2;text-underline-offset:0.22em;text-decoration-thickness:1px;text-decoration-color:rgba(237,233,226,0.45)}a:hover{color:#FFFFFF;text-decoration-color:#E8A64A}
+:focus-visible{outline:2px solid #E8A64A;outline-offset:3px}
+.btn{cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active:not(:disabled){transform:scale(0.97)}
+@media (hover:hover) and (pointer:fine){.btn-plate:hover{background:#FFFFFF}.btn-line:hover{border-color:#EDE9E2;background:rgba(237,233,226,0.06)}}
+.beam-a{animation:beam 1000ms cubic-bezier(0.23,1,0.32,1) 260ms both}
+.beam-b{animation:beam 1000ms cubic-bezier(0.23,1,0.32,1) both}
+.gap-in{animation:fade 320ms cubic-bezier(0.23,1,0.32,1) 1150ms both}
+@keyframes beam{from{clip-path:inset(0 88% 0 0);opacity:0.35}to{clip-path:inset(0 0 0 0);opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color 150ms ease}.btn:active:not(:disabled){transform:none}.beam-a,.beam-b,.gap-in{animation:none}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 3620px; background: #0A0A0C; color: #EDE9E2; font-family: 'Hanken Grotesk', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<section aria-label="Pay gaps, proven" style="position: relative; height: 900px; overflow: hidden; background: radial-gradient(ellipse 900px 360px at 62% 64%, rgba(40,38,46,0.9), rgba(10,10,12,0) 70%), radial-gradient(ellipse 520px 260px at 4% 66%, rgba(232,166,74,0.10), rgba(10,10,12,0) 70%), #0A0A0C">
+
+<header style="position: absolute; left: 80px; right: 80px; top: 36px; display: flex; align-items: center; gap: 44px; z-index: 3">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><rect x="0" y="3" width="30" height="5" fill="#D6E4F7"></rect><rect x="0" y="14" width="25" height="5" fill="#E8A64A"></rect><rect x="30" y="0" width="3" height="22" fill="#E4574A"></rect></svg>
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: 0.01em">Parity</span>
+</a>
+<nav aria-label="Main" style="display: flex; gap: 30px; font-size: 15px">
+<a href="#how" style="text-decoration: none; color: #B9B3A8">How it works</a>
+<a href="Report.dc.html" style="text-decoration: none; color: #B9B3A8">Sample report</a>
+<a href="Check.dc.html" style="text-decoration: none; color: #B9B3A8">For employees</a>
+</nav>
+<button type="button" class="btn btn-line" style="margin-left: auto; height: 42px; padding: 0 18px; background: transparent; color: #EDE9E2; border: 1px solid rgba(237,233,226,0.4); border-radius: 2px; font: inherit; font-size: 14px; font-weight: 600">Connect wallet</button>
+</header>
+
+<div style="position: absolute; left: 80px; top: 176px; width: 560px; display: flex; flex-direction: column; gap: 26px; z-index: 2">
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 118px; line-height: 0.86; font-weight: 900; letter-spacing: -0.005em">Pay gaps, proven.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; color: #CFC9BE; max-width: 520px">EU law now makes employers publish their gender pay gap, but nobody outside payroll can check the figures. Parity proves them against the real payroll, without revealing a single salary.</p>
+<div style="display: flex; gap: 14px; align-items: center">
+<a href="Payroll.dc.html" class="btn btn-plate" style="height: 52px; padding: 0 26px; display: inline-flex; align-items: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700; text-decoration: none">Start a report</a>
+<a href="Report.dc.html" class="btn btn-line" style="height: 52px; padding: 0 24px; display: inline-flex; align-items: center; box-sizing: border-box; border: 1px solid rgba(237,233,226,0.45); border-radius: 2px; font-size: 16px; font-weight: 600; text-decoration: none">See a sample report</a>
+</div>
+</div>
+
+<div aria-hidden="true">
+<div style="position: absolute; left: 1267px; top: 452px; width: 6px; height: 262px; background: #E4574A"></div>
+<span style="position: absolute; left: 1286px; top: 452px; font-size: 13px; font-weight: 600; color: #E4574A; white-space: nowrap">Equal pay</span>
+
+<div class="beam-b" style="position: absolute; left: 0; top: 574px; width: 1267px; height: 76px">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(214,228,247,0.34), rgba(214,228,247,0.14) 70%, rgba(214,228,247,0.24)); clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%); filter: blur(7px)"></div>
+<div style="position: absolute; left: 0; right: 0; top: 36px; height: 4px; background: linear-gradient(90deg, #F4F8FF, rgba(214,228,247,0.75))"></div>
+<div style="position: absolute; right: -22px; top: 8px; width: 60px; height: 60px; background: radial-gradient(circle, rgba(214,228,247,0.55), rgba(214,228,247,0) 70%)"></div>
+</div>
+
+<div class="beam-a" style="position: absolute; left: 0; top: 478px; width: 1152px; height: 76px">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(232,166,74,0.38), rgba(232,166,74,0.14) 70%, rgba(232,166,74,0.26)); clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%); filter: blur(7px)"></div>
+<div style="position: absolute; left: 0; right: 0; top: 36px; height: 4px; background: linear-gradient(90deg, #FFD9A0, rgba(232,166,74,0.8))"></div>
+<div style="position: absolute; right: -22px; top: 8px; width: 60px; height: 60px; background: radial-gradient(circle, rgba(232,166,74,0.5), rgba(232,166,74,0) 70%)"></div>
+</div>
+</div>
+
+<div class="gap-in" style="position: absolute; left: 1152px; top: 499px; width: 115px; height: 34px; box-sizing: border-box; border: 1px dashed rgba(237,233,226,0.7); border-left: none"></div>
+
+<span style="position: absolute; left: 820px; top: 452px; font-size: 15px; color: #F2C98C">Women, average <strong>€3,412</strong> a month</span>
+<span style="position: absolute; left: 872px; top: 662px; font-size: 15px; color: #DDE8F8">Men, average <strong>€3,753</strong> a month</span>
+
+<div class="gap-in" style="position: absolute; left: 1128px; top: 732px; display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; color: #E8A64A">9.1% short</span>
+<span style="font-size: 14px; color: #B9B3A8">€341 a month, on average</span>
+</div>
+
+<div aria-hidden="true" style="position: absolute; left: 0; top: 830px; width: 1267px; height: 14px; border-top: 1px solid rgba(237,233,226,0.35); display: grid; grid-template-columns: repeat(10, minmax(0, 1fr))">
+<span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span><span style="border-right: 1px solid rgba(237,233,226,0.35)"></span>
+</div>
+<span style="position: absolute; left: 80px; top: 856px; font-size: 13px; color: #8E887E">Sample figures from Halden &amp; Roe, a fictional employer. Scale: share of men&#39;s average pay.</span>
+</section>
+
+<section aria-labelledby="problem-title" style="padding: 140px 80px 120px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; border-top: 1px solid rgba(237,233,226,0.12)">
+<h2 id="problem-title" style="grid-column: 1 / span 6; margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 72px; line-height: 0.95; font-weight: 800">The law asks for a number nobody can check.</h2>
+<div style="grid-column: 8 / span 5; display: flex; flex-direction: column; font-size: 17px; line-height: 1.55; color: #CFC9BE">
+<p style="margin: 0 0 28px">The EU Pay Transparency Directive took effect in June 2026. Employers with 150 or more staff publish their first gender pay-gap report in June 2027, and a gap over 5% that they cannot justify triggers a joint pay assessment with worker representatives.</p>
+<p style="margin: 0 0 28px">But the report is computed from data only the employer sees. To check it, employees would need everyone&#39;s salary, which privacy law rightly forbids.</p>
+<p style="margin: 0; color: #EDE9E2; font-weight: 600">Parity makes the report checkable without opening the payroll.</p>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-title" style="padding: 40px 80px 140px; display: flex; flex-direction: column; gap: 56px">
+<h2 id="how-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; line-height: 1; font-weight: 800">Three cues, one proof</h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<li style="display: flex; flex-direction: column; gap: 18px; padding-top: 22px; border-top: 1px solid rgba(237,233,226,0.35)">
+<span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 1</span>
+<h3 style="margin: 0; font-size: 26px; font-weight: 700">Commit the payroll</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B9B3A8">HR publishes a fingerprint of every pay record on Midnight. The records stay private; the fingerprint can never be quietly changed.</p>
+<div aria-hidden="true" style="height: 64px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px; align-items: end">
+<span style="height: 30px; background: rgba(214,228,247,0.5)"></span><span style="height: 44px; background: rgba(232,166,74,0.55)"></span><span style="height: 38px; background: rgba(214,228,247,0.5)"></span><span style="height: 26px; background: rgba(232,166,74,0.55)"></span><span style="height: 52px; background: rgba(214,228,247,0.5)"></span><span style="height: 34px; background: rgba(232,166,74,0.55)"></span><span style="height: 46px; background: rgba(214,228,247,0.5)"></span><span style="height: 30px; background: rgba(232,166,74,0.55)"></span><span style="height: 40px; background: rgba(214,228,247,0.5)"></span><span style="height: 36px; background: rgba(232,166,74,0.55)"></span><span style="height: 58px; background: rgba(214,228,247,0.5)"></span><span style="height: 28px; background: rgba(232,166,74,0.55)"></span>
+</div>
+</li>
+<li style="display: flex; flex-direction: column; gap: 18px; padding-top: 22px; border-top: 1px solid rgba(237,233,226,0.35)">
+<span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 2</span>
+<h3 style="margin: 0; font-size: 26px; font-weight: 700">Employees check their own line</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B9B3A8">Each employee confirms on their phone that their record is in the fingerprint and correct. If it is not, they dispute it anonymously.</p>
+<div aria-hidden="true" style="height: 64px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px; align-items: end">
+<span style="height: 30px; background: rgba(214,228,247,0.18)"></span><span style="height: 44px; background: rgba(232,166,74,0.18)"></span><span style="height: 38px; background: rgba(214,228,247,0.18)"></span><span style="height: 26px; background: rgba(232,166,74,0.18)"></span><span style="height: 52px; background: rgba(214,228,247,0.18)"></span><span style="height: 34px; background: #E8A64A"></span><span style="height: 46px; background: rgba(214,228,247,0.18)"></span><span style="height: 30px; background: rgba(232,166,74,0.18)"></span><span style="height: 40px; background: rgba(214,228,247,0.18)"></span><span style="height: 36px; background: rgba(232,166,74,0.18)"></span><span style="height: 58px; background: rgba(214,228,247,0.18)"></span><span style="height: 28px; background: rgba(232,166,74,0.18)"></span>
+</div>
+</li>
+<li style="display: flex; flex-direction: column; gap: 18px; padding-top: 22px; border-top: 1px solid rgba(237,233,226,0.35)">
+<span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 3</span>
+<h3 style="margin: 0; font-size: 26px; font-weight: 700">Prove the report</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B9B3A8">A zero-knowledge proof shows the published averages came from exactly those records. Groups under five people are never published.</p>
+<div aria-hidden="true" style="height: 64px; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+<span style="display: block; width: 100%; height: 4px; background: #D6E4F7"></span>
+<span style="display: block; width: 91%; height: 4px; background: #E8A64A"></span>
+</div>
+</li>
+</ol>
+</section>
+
+<section aria-labelledby="sample-title" style="padding: 120px 80px; background: #111114; border-top: 1px solid rgba(237,233,226,0.12); border-bottom: 1px solid rgba(237,233,226,0.12); display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h2 id="sample-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; line-height: 1; font-weight: 800">What a proven report shows</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #CFC9BE">Every category of work, as two beams and the distance between them. A group too small to stay anonymous is withheld, and says so.</p>
+<a href="Report.dc.html" style="font-size: 16px; font-weight: 600">Open the sample report</a>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; padding-top: 34px">
+<div style="position: absolute; left: 684px; top: 0; bottom: 0; width: 3px; background: #E4574A"></div>
+<span style="position: absolute; left: 696px; top: 0; font-size: 13px; font-weight: 600; color: #E4574A; white-space: nowrap">5% line</span>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<div style="display: flex; justify-content: space-between; width: 720px; font-size: 17px"><span>Engineering</span><strong style="color: #E8A64A">8.4% short</strong></div>
+<div style="width: 720px; height: 3px; background: #D6E4F7"></div>
+<div style="width: 660px; height: 3px; background: #E8A64A"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<div style="display: flex; justify-content: space-between; width: 720px; font-size: 17px"><span>Warehouse operations</span><strong style="color: #E8A64A">7.4% short</strong></div>
+<div style="width: 720px; height: 3px; background: #D6E4F7"></div>
+<div style="width: 667px; height: 3px; background: #E8A64A"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<div style="display: flex; justify-content: space-between; width: 720px; font-size: 17px"><span>Customer support</span><strong>2.5% short</strong></div>
+<div style="width: 720px; height: 3px; background: #D6E4F7"></div>
+<div style="width: 702px; height: 3px; background: #E8A64A"></div>
+</div>
+<div style="display: flex; justify-content: space-between; width: 720px; padding: 22px 0; font-size: 17px; color: #8E887E"><span>Drivers</span><span>Withheld: fewer than 5 women</span></div>
+</div>
+</section>
+
+<section aria-labelledby="emp-title" style="padding: 140px 80px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: center">
+<div style="grid-column: 1 / span 6; display: flex; flex-direction: column; gap: 24px">
+<h2 id="emp-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 72px; line-height: 0.95; font-weight: 800">Is your pay in the report?</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #CFC9BE; max-width: 520px">Check your own record against what your employer committed. It happens on your phone. Your employer does not learn that you looked, and nobody learns what you earn.</p>
+<a href="Check.dc.html" class="btn btn-plate" style="width: fit-content; height: 52px; padding: 0 26px; display: inline-flex; align-items: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700; text-decoration: none">Check my record</a>
+</div>
+<div style="grid-column: 8 / span 4; justify-self: end; width: 340px; padding: 26px; background: #141417; border: 1px solid rgba(237,233,226,0.16); border-radius: 14px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700">Your 2026 record</h3>
+<div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 15px"><span style="color: #B9B3A8">Category</span><span>Warehouse operations</span></div>
+<div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 15px"><span style="color: #B9B3A8">Average monthly pay</span><span>€2,910</span></div>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #F2C98C">
+<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4l3.2 3.2L13 4.8" fill="none" stroke="#E8A64A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>In the committed payroll</span>
+</div>
+</section>
+
+<section aria-labelledby="built-title" style="padding: 120px 80px; border-top: 1px solid rgba(237,233,226,0.12); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px">
+<h2 id="built-title" style="grid-column: 1 / span 5; margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; line-height: 1; font-weight: 800">Built on Midnight</h2>
+<dl style="grid-column: 7 / span 6; margin: 0; display: grid; grid-template-columns: 200px minmax(0, 1fr); font-size: 16px">
+<dt style="padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14); color: #B9B3A8">Contract</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Compact, with private witnesses for every salary</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14); color: #B9B3A8">Commitment</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Merkle root of the payroll, on-chain</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14); color: #B9B3A8">Report</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Zero-knowledge proof of the aggregates and the 5-person rule</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14); color: #B9B3A8">Network</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Midnight Preview, contract <code style="font-size: 14px">[ADDRESS]</code></dd>
+</dl>
+</section>
+
+<section aria-labelledby="close-title" style="padding: 120px 80px 100px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start">
+<h2 id="close-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 96px; line-height: 0.9; font-weight: 900; max-width: 900px">Publish a report anyone can check.</h2>
+<a href="Payroll.dc.html" class="btn btn-plate" style="height: 56px; padding: 0 30px; display: inline-flex; align-items: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 17px; font-weight: 700; text-decoration: none">Start a report</a>
+</section>
+
+<footer style="margin-top: auto; padding: 32px 80px 40px; border-top: 1px solid rgba(237,233,226,0.12); display: flex; gap: 32px; font-size: 14px; color: #8E887E">
+<span>Parity is a prototype for the Rise In New Moon to Full programme. It runs on a Midnight test network and has not been audited.</span>
+<a href="https://github.com/resulcetin09" style="margin-left: auto; color: #B9B3A8">Source on GitHub</a>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3620}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3620,
+      "title": "Landing page"
+    },
+    "Report.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 2020,
+      "title": "Public report"
+    },
+    "Payroll.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 1220,
+      "title": "HR: report console"
+    },
+    "Check.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Employee: check my record"
+    },
+    "Dispute.dc.html": {
+      "x": 5030,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Employee: anonymous dispute"
+    },
+    "Identity.dc.html": {
+      "x": 0,
+      "y": 4000,
+      "w": 1440,
+      "h": 1780,
+      "title": "Identity"
+    },
+    "Components.dc.html": {
+      "x": 1520,
+      "y": 4000,
+      "w": 1440,
+      "h": 2080,
+      "title": "Components"
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-28T20:20:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "focused",
+    "file": "Main.dc.html"
+  },
+  "notes": {
+    "screens": {
+      "x": 0,
+      "y": -300,
+      "text": "Parity: screens",
+      "kind": "title1",
+      "maxW": 5420
+    },
+    "identity": {
+      "x": 0,
+      "y": 3700,
+      "text": "Parity: identity and components",
+      "kind": "title1",
+      "maxW": 2960
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Report.dc.html",
+    "Payroll.dc.html",
+    "Check.dc.html",
+    "Dispute.dc.html",
+    "Identity.dc.html",
+    "Components.dc.html"
+  ],
+  "pages": [],
+  "title": "Parity"
+}

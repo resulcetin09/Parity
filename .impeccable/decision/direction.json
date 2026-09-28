@@ -1,0 +1,130 @@
+{
+  "title": "Choose Parity's visual world",
+  "question": "Dark and cinematic, as you chose. The roll assigned the Darkroom. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Darkroom Proof",
+      "kicker": "THE ROLL",
+      "lineage": "Analog darkroom: safelight, test strips, proof prints",
+      "thesis": "The report develops in the tray: a proof print, not a claim.",
+      "palette": ["#0B0908", "#2A0D0B", "#D8412F", "#F1E6D6", "#D6A350", "#8E7F72"],
+      "materials": ["safelight glow on black", "fibre-paper proof prints", "test-strip exposure bands"],
+      "viewport": "A black room lit by one red safelight; the pay bars develop in as a test strip beside the headline, with Start a report as the primary action.",
+      "risk": "Red can read as alarm; the safelight stays light only, and the 5% threshold is marked in amber, never red.",
+      "raised": [
+        { "from": "challenger-step-row", "raise": "The report lifecycle is one unbroken row with a live marker showing where now is." },
+        { "from": "challenger-ikebana", "raise": "One develop moment per page, held in charged black emptiness." },
+        { "from": "challenger-miura", "raise": "Committing the payroll visibly propagates to every figure on the page." },
+        { "from": "challenger-googie", "raise": "One continuous line carries the eye from hero to proof." },
+        { "from": "challenger-installer", "raise": "Proving stays visibly gated until the check window closes." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Touchstone Assay",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Assay offices: touchstone streak tests and hallmarks",
+      "thesis": "Value tested on black stone without melting the metal.",
+      "palette": ["#111111", "#2A2A28", "#D8B25A", "#C7C9CC", "#F2EEE6", "#B5462E"],
+      "materials": ["black basalt touchstone", "gold and silver streaks", "struck hallmark"],
+      "viewport": "A black touchstone slab across the viewport with two metal streaks side by side, the gap measured between them, and a struck hallmark reading Proven.",
+      "risk": "Gold on black is the familiar luxury and crypto look; it must stay mineral, never glossy."
+    },
+    {
+      "id": "challenger-rail",
+      "label": "Emission-Line Rail",
+      "verdict": "competitive",
+      "lineage": "Spectroscopy plates",
+      "thesis": "Every aggregate is a hairline on one calibrated rail; the gap is the distance between lines.",
+      "palette": ["#1C1D1F", "#E8E2D6", "#F2C14E", "#7FB6E8", "#E0705E"],
+      "materials": ["charcoal continuum", "hairline emission lines"],
+      "viewport": "One off-centre rail with women's and men's averages as bright lines and the 5% band dashed.",
+      "case": "Fuses cleanly and plots pay positions exactly; wins clarity, loses warmth for a people topic.",
+      "risk": "Can read as a cold lab instrument.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-emission-line-rail-hero.webp"
+    },
+    {
+      "id": "challenger-step-row",
+      "label": "Rhythm Machine Step Row",
+      "verdict": "declined",
+      "lineage": "Early-80s drum machines",
+      "thesis": "Payroll records as sixteen lit step keys.",
+      "palette": ["#1E1E1E", "#E0402F", "#F08A24", "#F3D23C", "#F4F1EA"],
+      "materials": ["silkscreen panel", "lit step keys"],
+      "viewport": "Sixteen step keys under a chase light.",
+      "case": "Cute but misleading: nothing about pay is rhythmic.",
+      "risk": "Toy-like.",
+      "kept": "One unbroken lifecycle row with a live marker for now.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"
+    },
+    {
+      "id": "challenger-ikebana",
+      "label": "Ikebana and Ma",
+      "verdict": "declined",
+      "lineage": "Tokonoma arrangement",
+      "thesis": "Active emptiness around one line.",
+      "palette": ["#E6E0D4", "#6E6358", "#3E5C9A", "#4A3B2A"],
+      "materials": ["plaster alcove", "bronze vessel"],
+      "viewport": "One branch in an empty alcove.",
+      "case": "Beautiful, but neither audience recognizes itself in it.",
+      "risk": "Too quiet for a proof.",
+      "kept": "Charged emptiness around a single developing moment.",
+      "hero": "https://impeccable.style/worlds/cards/growth-metamorphosis-branching-ikebana-ma-arrangement-hero.webp"
+    },
+    {
+      "id": "challenger-miura",
+      "label": "Miura-fold Sheet",
+      "verdict": "declined",
+      "lineage": "Deployable aerospace folds",
+      "thesis": "One pull deploys the whole sheet.",
+      "palette": ["#F4F2EC", "#C9A24A", "#8C8A84", "#9BB7D0", "#141414"],
+      "materials": ["scored sheet", "gold packet"],
+      "viewport": "A packet unfolding into a tessellated sheet.",
+      "case": "Folding says nothing about pay or proof.",
+      "risk": "Engineering novelty.",
+      "kept": "One commitment visibly propagates across the whole page.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp"
+    },
+    {
+      "id": "challenger-googie",
+      "label": "Googie Diner",
+      "verdict": "declined",
+      "lineage": "Space-age roadside diners",
+      "thesis": "Coffee sold as the future.",
+      "palette": ["#3FB8AF", "#FF7F66", "#C0C0C0", "#2B2B2B", "#FFFFFF"],
+      "materials": ["laminate", "neon starburst"],
+      "viewport": "A starburst sign over a swooping roofline.",
+      "case": "Playful kitsch undercuts a compliance product.",
+      "risk": "Unserious.",
+      "kept": "One continuous line leads from hero to proof.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-googie-starburst-diner-hero.webp"
+    },
+    {
+      "id": "challenger-installer",
+      "label": "Shareware Installer",
+      "verdict": "declined",
+      "lineage": "1990s setup wizards",
+      "thesis": "A linear wizard that will not let you skip.",
+      "palette": ["#C0C0C0", "#000080", "#FFFFFF", "#008080"],
+      "materials": ["bevelled chrome", "dithered banner"],
+      "viewport": "A narrow grey dialog with a progress bar.",
+      "case": "Retro chrome fights the cinematic brief.",
+      "risk": "Nostalgia gag.",
+      "kept": "Visible gating: proving waits for the check window.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-shareware-installer-screens-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A dark web3 product landing, executed at full craft.",
+    "palette": ["#0A0A0B", "#FAFAFA", "#7C5CFF", "#1F1F23"],
+    "materials": ["dark gradient glow", "large product screenshot"],
+    "viewport": "Headline, two buttons and a large product screenshot on a glowing dark gradient.",
+    "risk": "Indistinguishable from every dark crypto landing page."
+  },
+  "steer": true
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parity: HR report console</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A0A0C;color:#EDE9E2;font-family:"Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:#E8A64A}
+::selection{background:rgba(232,166,74,0.35);color:#FFFFFF}
+a{color:#EDE9E2;text-underline-offset:0.22em;text-decoration-thickness:1px;text-decoration-color:rgba(237,233,226,0.45)}a:hover{color:#FFFFFF;text-decoration-color:#E8A64A}
+:focus-visible{outline:2px solid #E8A64A;outline-offset:3px}
+.btn{cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active:not(:disabled){transform:scale(0.97)}
+.btn:disabled{cursor:not-allowed}
+@media (hover:hover) and (pointer:fine){.btn-plate:hover:not(:disabled){background:#FFFFFF}.btn-line:hover{border-color:#EDE9E2;background:rgba(237,233,226,0.06)}}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color 150ms ease}.btn:active:not(:disabled){transform:none}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1220px; background: #0A0A0C; color: #EDE9E2; font-family: 'Hanken Grotesk', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<header style="display: flex; align-items: center; gap: 40px; padding: 28px 80px; border-bottom: 1px solid rgba(237,233,226,0.12)">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><rect x="0" y="3" width="30" height="5" fill="#D6E4F7"></rect><rect x="0" y="14" width="25" height="5" fill="#E8A64A"></rect><rect x="30" y="0" width="3" height="22" fill="#E4574A"></rect></svg>
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 28px; font-weight: 800">Parity</span>
+</a>
+<span style="font-size: 15px; color: #B9B3A8">Halden &amp; Roe, HR</span>
+<span style="margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #B9B3A8"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E8A64A"></span>Lace on Preview, mn_shield…384d</span>
+</header>
+
+<main style="padding: 56px 80px; display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 72px">
+
+<aside style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 64px; line-height: 0.9; font-weight: 900">2026 report</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B9B3A8">Due 7 June 2027 under the Pay Transparency Directive.</p>
+<ol style="margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; position: relative">
+<li style="display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14)"><span style="width: 14px; height: 14px; margin-top: 4px; border-radius: 50%; background: #D6E4F7"></span><span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Cue 1: Commit payroll</strong><span style="font-size: 13px; color: #8E887E">215 records, 31 Jan 2027</span></span><span style="font-size: 13px; color: #DDE8F8; font-weight: 600">Done</span></li>
+<li style="display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14)"><span style="width: 14px; height: 14px; margin-top: 4px; border-radius: 50%; background: #E8A64A; box-shadow: 0 0 0 5px rgba(232,166,74,0.2)"></span><span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Cue 2: Employee check window</strong><span style="font-size: 13px; color: #8E887E">Closes 15 Mar 2027</span></span><span style="font-size: 13px; color: #F2C98C; font-weight: 600">Now</span></li>
+<li style="display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14); color: #8E887E"><span style="width: 14px; height: 14px; margin-top: 4px; box-sizing: border-box; border-radius: 50%; border: 1px dashed rgba(237,233,226,0.55)"></span><span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Cue 3: Prove and publish</strong><span style="font-size: 13px">After disputes are resolved</span></span><span style="font-size: 13px">Waiting</span></li>
+</ol>
+<span style="display: inline-flex; align-items: center; gap: 8px; width: fit-content; height: 36px; padding: 0 14px; border-radius: 2px; background: #1C1B20; font-size: 14px; font-weight: 600"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E8A64A"></span>173 of 215 employees have checked</span>
+</aside>
+
+<section style="display: flex; flex-direction: column; gap: 36px">
+
+<div style="padding: 26px 28px; background: #1C1614; border: 1px solid rgba(228,87,74,0.45); border-radius: 14px; display: flex; align-items: center; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<strong style="font-size: 19px">An employee disputes their record</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #CFC9BE">They proved they hold a valid 2026 payslip and say the pay amount is wrong. You don&#39;t know who they are. Correct the payroll and commit it again, or publish a response.</span>
+</div>
+<button type="button" class="btn btn-plate" style="height: 50px; padding: 0 22px; background: #EDE9E2; color: #0A0A0C; border: none; border-radius: 2px; font: inherit; font-size: 15px; font-weight: 700; white-space: nowrap">Review dispute</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 40px; font-weight: 800">Who will be lit</h2>
+<span style="font-size: 14px; color: #8E887E">The proof withholds any group under 5 people</span>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px 170px; column-gap: 20px; padding: 10px 0; border-bottom: 1px solid rgba(237,233,226,0.35); font-size: 13px; color: #8E887E"><span>Category</span><span>Women</span><span>Men</span><span>In the report</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px 170px; column-gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 16px"><strong>Engineering</strong><span>6</span><span>19</span><span style="color: #F2C98C; font-weight: 600">Lit</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px 170px; column-gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 16px"><strong>Warehouse operations</strong><span>14</span><span>31</span><span style="color: #F2C98C; font-weight: 600">Lit</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px 170px; column-gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 16px"><strong>Customer support</strong><span>22</span><span>9</span><span style="color: #F2C98C; font-weight: 600">Lit</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px 170px; column-gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(237,233,226,0.14); font-size: 16px"><strong>Drivers</strong><span style="color: #F08A7E; font-weight: 600">3</span><span>40</span><span style="color: #8E887E; font-weight: 600">Stays dark</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 28px; background: #141417; border-radius: 14px">
+<span style="font-size: 14px; color: #8E887E">Current payroll commitment</span>
+<code style="font-size: 15px; color: #EDE9E2; overflow-wrap: anywhere">3f9c21e8d04a7b6c95e1f02d3a8b4c7d6e5f4a3b2c1d0e9f8a7b6c5d4b07a41e</code>
+<span style="font-size: 13px; color: #8E887E">Committed in block [BLOCK]. Employees compare it with the line on their payslip.</span>
+</div>
+
+<div style="display: flex; gap: 18px; align-items: center">
+<button type="button" class="btn" disabled style="height: 54px; padding: 0 28px; background: #2A292E; color: #A39D92; border: none; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 700">Generate report proof</button>
+<span style="font-size: 15px; color: #B9B3A8">Opens when the dispute is resolved and the check window has closed.</span>
+</div>
+
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1220}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

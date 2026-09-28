@@ -1,0 +1,132 @@
+{
+  "title": "Choose Parity's visual world",
+  "question": "Re-rolled with your steer: a concept visual first, with a short statement of the problem. The roll assigned Two Beams, One Stage.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Two Beams, One Stage",
+      "kicker": "THE ROLL",
+      "lineage": "Theatre lighting: follow spots cutting haze on a black stage",
+      "thesis": "Two spotlights aimed at the same mark; one falls short, and the shortfall is the pay gap.",
+      "palette": ["#0A0A0C", "#1C1B20", "#E8A64A", "#D6E4F7", "#E4574A", "#EDE9E2"],
+      "materials": ["theatrical haze", "follow-spot beams", "spike-tape marks on a black stage floor"],
+      "viewport": "An edge-to-edge dark stage where two beams reach for the same taped mark and one stops 9.1% short; beside it, three lines state the problem, then Start a report.",
+      "risk": "Light drawn as gradients can look like generic glow; it has to behave like real theatre light, with haze, falloff and hard gate edges.",
+      "raised": [
+        { "from": "challenger-accretion", "raise": "Figures are set along the beams themselves, and the centre of the stage is left unlit." },
+        { "from": "challenger-forge", "raise": "Measurements are marked on the stage floor like chalk ticks, in tabular numerals." },
+        { "from": "challenger-yeye", "raise": "Each published report owns one stage colour, carried through every page of it." },
+        { "from": "challenger-lowbrow", "raise": "The stage fills the whole first viewport, edge to edge; nothing sits on a plain background." },
+        { "from": "challenger-scope", "raise": "The stage floor carries one ten-division scale that every figure is measured against." },
+        { "from": "challenger-bbs", "raise": "How many employees have checked their record shows as quiet live presence, never as names." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Payslip Under Ultraviolet",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Security printing: guilloché, microtext and UV-reactive ink",
+      "thesis": "Under the right light the payslip shows it is genuine, and still hides what you earn.",
+      "palette": ["#0B0716", "#1E1433", "#9C7CFF", "#5CF2D6", "#F3EEFF", "#E9B949"],
+      "materials": ["guilloché rosettes", "microtext lines", "UV-fluorescent marks on dark paper"],
+      "viewport": "A payslip lit by black light fills the first view; its salary line stays dark while a guilloché seal fluoresces Proven, beside three lines stating the problem.",
+      "risk": "Violet glow on near-black is close to the familiar crypto look; the guilloché must be precise security engraving, not decoration."
+    },
+    {
+      "id": "challenger-scope",
+      "label": "Signal Bench Oscilloscope",
+      "verdict": "declined",
+      "lineage": "CRT oscilloscopes",
+      "thesis": "Two channels overlaid on one graticule, the gap measured with cursors.",
+      "palette": ["#0B0F0C", "#3CFF7A", "#1E5C34", "#F2B23A", "#7C8A80"],
+      "materials": ["phosphor trace", "etched graticule"],
+      "viewport": "A phosphor trace on an etched grid.",
+      "case": "Clear for engineers, but green phosphor is the neon-on-black default and cold for a people topic.",
+      "risk": "Terminal cliché.",
+      "kept": "One ten-division scale that every figure is measured against.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench-hero.webp"
+    },
+    {
+      "id": "challenger-accretion",
+      "label": "Accretion Disk Threshold",
+      "verdict": "declined",
+      "lineage": "Black-hole imaging",
+      "thesis": "Matter crossing an irreversible threshold.",
+      "palette": ["#000000", "#BFD8FF", "#E0562E", "#E8B54A"],
+      "materials": ["disk light", "photon ring"],
+      "viewport": "A glowing disk bending around a black centre.",
+      "case": "Spectacular, but says nothing about pay or proof.",
+      "risk": "Space wallpaper.",
+      "kept": "Figures set along the light itself, the centre left unlit.",
+      "hero": "https://impeccable.style/worlds/cards/galaxies-nebulae-deep-time-accretion-disk-threshold-hero.webp"
+    },
+    {
+      "id": "challenger-forge",
+      "label": "Forge and Power Hammer",
+      "verdict": "declined",
+      "lineage": "Blacksmithing",
+      "thesis": "Each blow visibly lengthens the bar.",
+      "palette": ["#141210", "#5A5D60", "#E8541E", "#FFD27A", "#F4EEE6"],
+      "materials": ["hot iron", "black scale"],
+      "viewport": "White-hot iron under a hammer.",
+      "case": "Violent energy clashes with an equality topic.",
+      "risk": "Aggressive.",
+      "kept": "Measurements ruled like chalk marks, in tabular numerals.",
+      "hero": "https://impeccable.style/worlds/cards/metal-forging-patina-blacksmith-scale-shower-hero.webp"
+    },
+    {
+      "id": "challenger-yeye",
+      "label": "Yé-yé Pop Sleeve",
+      "verdict": "declined",
+      "lineage": "1960s French pop record sleeves",
+      "thesis": "One flat saturated ground per release.",
+      "palette": ["#FF8A1F", "#1FC3C3", "#FFFFFF", "#2A1A12"],
+      "materials": ["flat colour ground", "cropped portrait"],
+      "viewport": "A tangerine sleeve with a cropped portrait.",
+      "case": "Bright and light, against the dark cinematic brief.",
+      "risk": "Wrong mood.",
+      "kept": "Each report owns one colour, carried through all its pages.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-yeye-pop-sleeve-hero.webp"
+    },
+    {
+      "id": "challenger-lowbrow",
+      "label": "Lowbrow Gallery Panel",
+      "verdict": "declined",
+      "lineage": "Airbrushed lowbrow art",
+      "thesis": "A crowded lacquered tableau.",
+      "palette": ["#E0262E", "#1A1A1A", "#2BB5C9", "#F2C12E"],
+      "materials": ["candy lacquer", "black outline"],
+      "viewport": "Hot-rod monsters fighting for space.",
+      "case": "Chaotic and unserious for a compliance proof.",
+      "risk": "Noise.",
+      "kept": "Total commitment: the first view is filled edge to edge.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-lowbrow-gallery-panel-hero.webp"
+    },
+    {
+      "id": "challenger-bbs",
+      "label": "ANSI Nightboard",
+      "verdict": "declined",
+      "lineage": "Dial-up bulletin boards",
+      "thesis": "A neighbourhood made of text at 2 a.m.",
+      "palette": ["#000000", "#00C0C0", "#C000C0", "#FFFFFF", "#0000A8"],
+      "materials": ["block characters", "80-column grid"],
+      "viewport": "ANSI title art pouring in line by line.",
+      "case": "Retro terminal chrome reads as a gag, not a proof.",
+      "risk": "Nostalgia gimmick.",
+      "kept": "Presence is scarce and precious: live, anonymous check-ins.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-ansi-bbs-nightboard-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A dark web3 product landing, executed at full craft.",
+    "palette": ["#0A0A0B", "#FAFAFA", "#7C5CFF", "#1F1F23"],
+    "materials": ["dark gradient glow", "large product screenshot"],
+    "viewport": "Headline, two buttons and a large product screenshot on a glowing dark gradient.",
+    "risk": "Indistinguishable from every dark crypto landing page."
+  },
+  "steer": true
+}

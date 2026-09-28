@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parity: Halden &amp; Roe 2026 report</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A0A0C;color:#EDE9E2;font-family:"Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:#E8A64A}
+::selection{background:rgba(232,166,74,0.35);color:#FFFFFF}
+a{color:#EDE9E2;text-underline-offset:0.22em;text-decoration-thickness:1px;text-decoration-color:rgba(237,233,226,0.45)}a:hover{color:#FFFFFF;text-decoration-color:#E8A64A}
+:focus-visible{outline:2px solid #E8A64A;outline-offset:3px}
+.btn{cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active:not(:disabled){transform:scale(0.97)}
+@media (hover:hover) and (pointer:fine){.btn-line:hover{border-color:#EDE9E2;background:rgba(237,233,226,0.06)}}
+.beam-a{animation:beam 1000ms cubic-bezier(0.23,1,0.32,1) 260ms both}
+.beam-b{animation:beam 1000ms cubic-bezier(0.23,1,0.32,1) both}
+.gap-in{animation:fade 320ms cubic-bezier(0.23,1,0.32,1) 1150ms both}
+@keyframes beam{from{clip-path:inset(0 88% 0 0);opacity:0.35}to{clip-path:inset(0 0 0 0);opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color 150ms ease}.btn:active:not(:disabled){transform:none}.beam-a,.beam-b,.gap-in{animation:none}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 2020px; background: #0A0A0C; color: #EDE9E2; font-family: 'Hanken Grotesk', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<header style="display: flex; align-items: center; gap: 44px; padding: 36px 80px 0">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><rect x="0" y="3" width="30" height="5" fill="#D6E4F7"></rect><rect x="0" y="14" width="25" height="5" fill="#E8A64A"></rect><rect x="30" y="0" width="3" height="22" fill="#E4574A"></rect></svg>
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 30px; font-weight: 800">Parity</span>
+</a>
+<nav aria-label="Main" style="display: flex; gap: 30px; font-size: 15px">
+<a href="Main.dc.html#how" style="text-decoration: none; color: #B9B3A8">How it works</a>
+<a href="Report.dc.html" aria-current="page" style="text-decoration: none; color: #EDE9E2">Sample report</a>
+<a href="Check.dc.html" style="text-decoration: none; color: #B9B3A8">For employees</a>
+</nav>
+</header>
+
+<section aria-labelledby="r-title" style="position: relative; height: 640px; margin-top: 12px; overflow: hidden; background: radial-gradient(ellipse 900px 320px at 60% 62%, rgba(40,38,46,0.85), rgba(10,10,12,0) 70%), #0A0A0C">
+<div style="position: absolute; left: 80px; top: 70px; display: flex; flex-direction: column; gap: 16px">
+<h1 id="r-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 96px; line-height: 0.88; font-weight: 900">Halden &amp; Roe</h1>
+<p style="margin: 0; font-size: 18px; color: #CFC9BE">Gender pay gap report, calendar year 2026. Published 7 June 2027.</p>
+<span style="display: inline-flex; align-items: center; gap: 8px; width: fit-content; height: 36px; padding: 0 14px; border-radius: 2px; background: rgba(232,166,74,0.14); color: #F2C98C; font-size: 14px; font-weight: 600"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4l3.2 3.2L13 4.8" fill="none" stroke="#E8A64A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Proven against payroll: 215 records, 0 open disputes</span>
+</div>
+
+<div aria-hidden="true">
+<div style="position: absolute; left: 1267px; top: 290px; width: 6px; height: 232px; background: #E4574A"></div>
+<span style="position: absolute; left: 1286px; top: 290px; font-size: 13px; font-weight: 600; color: #E4574A; white-space: nowrap">Equal pay</span>
+<div style="position: absolute; left: 1203px; top: 290px; width: 0; height: 232px; border-left: 2px dashed #E4574A"></div>
+<span style="position: absolute; left: 1136px; top: 526px; font-size: 13px; font-weight: 600; color: #E4574A; white-space: nowrap">5% line</span>
+<div class="beam-b" style="position: absolute; left: 0; top: 410px; width: 1267px; height: 70px">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(214,228,247,0.32), rgba(214,228,247,0.12) 70%, rgba(214,228,247,0.22)); clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%); filter: blur(7px)"></div>
+<div style="position: absolute; left: 0; right: 0; top: 33px; height: 4px; background: linear-gradient(90deg, #F4F8FF, rgba(214,228,247,0.75))"></div>
+</div>
+<div class="beam-a" style="position: absolute; left: 0; top: 320px; width: 1152px; height: 70px">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(232,166,74,0.36), rgba(232,166,74,0.13) 70%, rgba(232,166,74,0.24)); clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%); filter: blur(7px)"></div>
+<div style="position: absolute; left: 0; right: 0; top: 33px; height: 4px; background: linear-gradient(90deg, #FFD9A0, rgba(232,166,74,0.8))"></div>
+</div>
+</div>
+<div class="gap-in" style="position: absolute; left: 1152px; top: 339px; width: 115px; height: 32px; box-sizing: border-box; border: 1px dashed rgba(237,233,226,0.7); border-left: none"></div>
+<span style="position: absolute; left: 80px; top: 292px; font-size: 15px; color: #F2C98C">Women, average <strong>€3,412</strong> a month, 45 people</span>
+<span style="position: absolute; left: 80px; top: 492px; font-size: 15px; color: #DDE8F8">Men, average <strong>€3,753</strong> a month, 170 people</span>
+<div class="gap-in" style="position: absolute; left: 760px; top: 500px; display: flex; align-items: baseline; gap: 14px">
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 64px; line-height: 1; font-weight: 800; color: #E8A64A">9.1% short</span>
+<span style="font-size: 14px; color: #B9B3A8">€341 a month on average</span>
+</div>
+<span style="position: absolute; left: 80px; top: 600px; font-size: 13px; color: #8E887E">Sample report. Halden &amp; Roe is a fictional employer.</span>
+</section>
+
+<section aria-labelledby="cat-title" style="padding: 100px 80px 80px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(237,233,226,0.12)">
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px">
+<h2 id="cat-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; font-weight: 800">By category of work</h2>
+<span style="font-size: 14px; color: #8E887E">Groups under 5 people are never published</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 260px 180px minmax(0, 1fr) 240px; column-gap: 32px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700">Engineering</h3>
+<span style="font-size: 14px; line-height: 1.5; color: #B9B3A8">6 women, 19 men<br>€5,140 against €5,610</span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 9px"><div style="width: 100%; height: 3px; background: #D6E4F7"></div><div style="width: 91.6%; height: 3px; background: #E8A64A"></div><div style="position: absolute; left: 95%; top: -8px; width: 2px; height: 28px; background: #E4574A"></div></div>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 20px; color: #E8A64A">8.4% short</strong><span style="font-size: 13px; color: #F08A7E">Over 5%: joint assessment</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 260px 180px minmax(0, 1fr) 240px; column-gap: 32px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700">Warehouse operations</h3>
+<span style="font-size: 14px; line-height: 1.5; color: #B9B3A8">14 women, 31 men<br>€2,860 against €3,090</span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 9px"><div style="width: 100%; height: 3px; background: #D6E4F7"></div><div style="width: 92.6%; height: 3px; background: #E8A64A"></div><div style="position: absolute; left: 95%; top: -8px; width: 2px; height: 28px; background: #E4574A"></div></div>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 20px; color: #E8A64A">7.4% short</strong><span style="font-size: 13px; color: #F08A7E">Over 5%: joint assessment</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 260px 180px minmax(0, 1fr) 240px; column-gap: 32px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700">Customer support</h3>
+<span style="font-size: 14px; line-height: 1.5; color: #B9B3A8">22 women, 9 men<br>€2,720 against €2,790</span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 9px"><div style="width: 100%; height: 3px; background: #D6E4F7"></div><div style="width: 97.5%; height: 3px; background: #E8A64A"></div><div style="position: absolute; left: 95%; top: -8px; width: 2px; height: 28px; background: #E4574A"></div></div>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 20px">2.5% short</strong><span style="font-size: 13px; color: #DDE8F8">Within 5%</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 260px 180px minmax(0, 1fr) 240px; column-gap: 32px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #B9B3A8">Drivers</h3>
+<span style="font-size: 14px; color: #8E887E">43 people</span>
+<span style="font-size: 15px; color: #B9B3A8">Not lit. Fewer than 5 women work here, so an average could identify them.</span>
+<span style="font-size: 13px; color: #8E887E">Withheld by the circuit</span>
+</div>
+</section>
+
+<section aria-labelledby="v-title" style="padding: 60px 80px 100px; display: flex; flex-direction: column; gap: 30px">
+<h2 id="v-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 56px; font-weight: 800">How this report was proven</h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(237,233,226,0.35)"><span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 1, 31 Jan 2027</span><strong style="font-size: 20px">Payroll committed</strong><span style="font-size: 15px; line-height: 1.55; color: #B9B3A8">A fingerprint of all 215 records went on-chain. The records stayed private.</span><code style="font-size: 13px; color: #8E887E">root 3f9c…a41e</code></li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(237,233,226,0.35)"><span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 2, 1 Feb to 15 Mar 2027</span><strong style="font-size: 20px">Employees checked their lines</strong><span style="font-size: 15px; line-height: 1.55; color: #B9B3A8">Each employee could confirm their own record. Disputes were anonymous.</span><span style="font-size: 13px; color: #8E887E">2 disputes filed, 2 resolved</span></li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(237,233,226,0.35)"><span style="font-size: 14px; color: #E8A64A; font-weight: 600">Cue 3, 7 Jun 2027</span><strong style="font-size: 20px">Report proven</strong><span style="font-size: 15px; line-height: 1.55; color: #B9B3A8">A zero-knowledge proof shows these figures came from exactly the committed records.</span><code style="font-size: 13px; color: #8E887E">tx [TX HASH], block [BLOCK]</code></li>
+</ol>
+<a href="#" class="btn btn-line" style="width: fit-content; height: 50px; margin-top: 10px; padding: 0 22px; display: inline-flex; align-items: center; box-sizing: border-box; border: 1px solid rgba(237,233,226,0.45); border-radius: 2px; font-size: 15px; font-weight: 600; text-decoration: none">Verify it yourself</a>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2020}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

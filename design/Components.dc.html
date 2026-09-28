@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parity components</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A0A0C;color:#EDE9E2;font-family:"Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:#E8A64A}
+::selection{background:rgba(232,166,74,0.35);color:#FFFFFF}
+a{color:#EDE9E2;text-underline-offset:0.22em;text-decoration-thickness:1px;text-decoration-color:rgba(237,233,226,0.45)}a:hover{color:#FFFFFF;text-decoration-color:#E8A64A}
+:focus-visible{outline:2px solid #E8A64A;outline-offset:3px}
+input:focus-visible{outline-offset:1px;border-color:#E8A64A}
+.btn{cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active:not(:disabled){transform:scale(0.97)}
+.btn:disabled{cursor:not-allowed}
+@media (hover:hover) and (pointer:fine){.btn-plate:hover:not(:disabled){background:#FFFFFF}.btn-line:hover{border-color:#EDE9E2;background:rgba(237,233,226,0.06)}.btn-spike:hover{background:rgba(228,87,74,0.12)}.btn-spike-solid:hover{background:#C9473B}}
+.spin{animation:spin 700ms linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color 150ms ease}.btn:active:not(:disabled){transform:none}.spin{animation-duration:2s}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 2080px; box-sizing: border-box; padding: 88px 80px; background: #0A0A0C; color: #EDE9E2; font-family: 'Hanken Grotesk', system-ui, sans-serif; display: flex; flex-direction: column; gap: 72px">
+
+<section aria-labelledby="b-title" style="display: flex; flex-direction: column; gap: 28px">
+<h2 id="b-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 44px; font-weight: 800">Buttons are gaffer-tape plates</h2>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 12px"><button type="button" class="btn btn-plate" style="height: 52px; padding: 0 24px; background: #EDE9E2; color: #0A0A0C; border: none; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 700">Start a report</button><span style="font-size: 13px; line-height: 1.45; color: #8E887E">Plate. The one action that moves the story forward.</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><button type="button" class="btn btn-line" style="height: 52px; padding: 0 24px; background: transparent; color: #EDE9E2; border: 1px solid rgba(237,233,226,0.45); border-radius: 2px; font: inherit; font-size: 16px; font-weight: 600">See a sample report</button><span style="font-size: 13px; line-height: 1.45; color: #8E887E">Line. Alternatives and preparation.</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><a href="#" style="height: 52px; display: inline-flex; align-items: center; font-size: 16px; font-weight: 600">See the proof</a><span style="font-size: 13px; line-height: 1.45; color: #8E887E">Link. Leads to evidence: commitments, transactions.</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><button type="button" class="btn btn-spike" style="height: 52px; padding: 0 24px; background: transparent; color: #F08A7E; border: 1px solid #E4574A; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 600">Something is wrong</button><span style="font-size: 13px; line-height: 1.45; color: #8E887E">Spike line. Opens an anonymous dispute.</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><button type="button" class="btn btn-spike-solid" style="height: 52px; padding: 0 24px; background: #E4574A; color: #0A0A0C; border: none; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 700">File dispute</button><span style="font-size: 13px; line-height: 1.45; color: #8E887E">Spike plate. Confirms the dispute.</span></div>
+</div>
+<h3 style="margin: 12px 0 0; font-size: 18px; font-weight: 700">States of a plate</h3>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700">Generate proof</span><span style="font-size: 13px; color: #8E887E">Rest</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700">Generate proof</span><span style="font-size: 13px; color: #8E887E">Hover, pointer only</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700; transform: scale(0.97)">Generate proof</span><span style="font-size: 13px; color: #8E887E">Pressed, scale 0.97</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700; outline: 2px solid #E8A64A; outline-offset: 3px">Generate proof</span><span style="font-size: 13px; color: #8E887E">Keyboard focus</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; gap: 10px; background: #EDE9E2; color: #0A0A0C; border-radius: 2px; font-size: 16px; font-weight: 700"><svg class="spin" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="#B9B3A8" stroke-width="2"></circle><path d="M8 2a6 6 0 0 1 6 6" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round"></path></svg>Proving…</span><span style="font-size: 13px; color: #8E887E">Working, says what</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 52px; display: flex; align-items: center; justify-content: center; background: #2A292E; color: #A39D92; border-radius: 2px; font-size: 16px; font-weight: 700">Generate proof</span><span style="font-size: 13px; color: #8E887E">Unavailable, reason beside it</span></div>
+</div>
+</section>
+
+<section aria-labelledby="s-title" style="display: flex; flex-direction: column; gap: 22px">
+<h2 id="s-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 44px; font-weight: 800">Status</h2>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center">
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; border-radius: 2px; background: rgba(232,166,74,0.14); color: #F2C98C; font-size: 14px; font-weight: 600"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4l3.2 3.2L13 4.8" fill="none" stroke="#E8A64A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Proven against payroll</span>
+<span style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 2px; background: rgba(228,87,74,0.14); color: #F08A7E; font-size: 14px; font-weight: 600">Over 5%: joint assessment</span>
+<span style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 2px; border: 1px solid rgba(214,228,247,0.5); color: #DDE8F8; font-size: 14px; font-weight: 600">Within 5%</span>
+<span style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 2px; border: 1px dashed rgba(237,233,226,0.55); color: #B9B3A8; font-size: 14px; font-weight: 600">Withheld: fewer than 5</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; border-radius: 2px; background: #1C1B20; color: #EDE9E2; font-size: 14px; font-weight: 600"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E8A64A"></span>38 employees checked today</span>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 44px; font-weight: 800">Fields</h2>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-root" style="font-size: 15px; font-weight: 600">Payroll commitment</label>
+<input id="f-root" value="3f9c21…b07a41e" readonly style="height: 50px; padding: 0 14px; background: #141417; border: 1px solid rgba(237,233,226,0.22); border-radius: 2px; font: inherit; font-size: 15px; color: #EDE9E2">
+<span style="font-size: 13px; color: #8E887E">Published 31 Jan 2027. Compare it with the line on your payslip.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-pay" style="font-size: 15px; font-weight: 600">Average monthly pay on your payslips</label>
+<input id="f-pay" value="€3,050" aria-invalid="true" aria-describedby="f-pay-err" style="height: 50px; padding: 0 14px; background: #141417; border: 1px solid #E4574A; border-radius: 2px; font: inherit; font-size: 15px; color: #EDE9E2">
+<span id="f-pay-err" style="font-size: 13px; color: #F08A7E">Your committed record says €2,910. If your payslips are right, file a dispute.</span>
+</div>
+<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 6px">
+<legend style="font-size: 15px; font-weight: 600; margin-bottom: 8px">What is wrong?</legend>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 40px; font-size: 15px"><input type="radio" name="f-w" checked style="width: 20px; height: 20px; accent-color: #E8A64A">Pay amount</label>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 40px; font-size: 15px"><input type="radio" name="f-w" style="width: 20px; height: 20px; accent-color: #E8A64A">Category of work</label>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 40px; font-size: 15px"><input type="radio" name="f-w" style="width: 20px; height: 20px; accent-color: #E8A64A">My record is missing</label>
+</fieldset>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 44px; font-weight: 800">Beam pair</h2>
+<div style="position: relative; padding: 34px 28px 30px; background: #141417; border-radius: 14px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; color: #8E887E">Headline size</span>
+<div style="position: relative; height: 70px">
+<div style="position: absolute; left: 520px; top: -6px; width: 4px; height: 82px; background: #E4574A"></div>
+<div style="position: absolute; left: 0; top: 12px; width: 473px; height: 4px; background: linear-gradient(90deg, #FFD9A0, #E8A64A)"></div>
+<div style="position: absolute; left: 473px; top: 2px; width: 47px; height: 24px; box-sizing: border-box; border: 1px dashed rgba(237,233,226,0.7); border-left: none"></div>
+<div style="position: absolute; left: 0; top: 50px; width: 520px; height: 4px; background: linear-gradient(90deg, #F4F8FF, #D6E4F7)"></div>
+</div>
+<span style="font-size: 15px"><strong style="color: #E8A64A">9.1% short</strong> <span style="color: #B9B3A8">the chalk marks the length the beam did not reach</span></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="padding: 22px; background: #141417; border-radius: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #8E887E">In a row, over 5%</span><div style="width: 100%; height: 3px; background: #D6E4F7"></div><div style="width: 91.6%; height: 3px; background: #E8A64A"></div><strong style="font-size: 15px; color: #E8A64A">8.4% short</strong></div>
+<div style="padding: 22px; background: #141417; border-radius: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #8E887E">In a row, within 5%</span><div style="width: 100%; height: 3px; background: #D6E4F7"></div><div style="width: 97.5%; height: 3px; background: #E8A64A"></div><strong style="font-size: 15px">2.5% short</strong></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; color: #8E887E">Proof reference</span>
+<div style="display: flex; align-items: center; gap: 12px; height: 46px; box-sizing: border-box; padding: 4px 6px 4px 16px; background: #141417; border: 1px solid rgba(237,233,226,0.14); border-radius: 2px; width: fit-content">
+<code style="font-size: 14px; color: #CFC9BE">tx 37b0…a831, block 1,066,774</code>
+<button type="button" class="btn" aria-label="Copy transaction hash" style="width: 36px; height: 36px; background: transparent; border: none; border-radius: 2px; display: flex; align-items: center; justify-content: center">
+<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="9" height="9" fill="none" stroke="#EDE9E2" stroke-width="1.5"></rect><path d="M11 3H2v9" fill="none" stroke="#EDE9E2" stroke-width="1.5"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="m-title" style="display: flex; flex-direction: column; gap: 18px">
+<h2 id="m-title" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 44px; font-weight: 800">Motion</h2>
+<table style="width: 100%; border-collapse: collapse; font-size: 15px">
+<thead><tr style="text-align: left; font-size: 13px; color: #8E887E"><th scope="col" style="padding: 10px 12px 10px 0; font-weight: 600; border-bottom: 1px solid rgba(237,233,226,0.35)">Moment</th><th scope="col" style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid rgba(237,233,226,0.35)">Duration</th><th scope="col" style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid rgba(237,233,226,0.35)">Easing</th><th scope="col" style="padding: 10px 0 10px 12px; font-weight: 600; border-bottom: 1px solid rgba(237,233,226,0.35)">Reduced motion</th></tr></thead>
+<tbody>
+<tr><th scope="row" style="text-align: left; font-weight: 600; padding: 14px 12px 14px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Beams switch on, once per page</th><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">1000 ms, second beam +260 ms</td><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)"><code>cubic-bezier(0.23, 1, 0.32, 1)</code>, from 12% lit</td><td style="padding: 14px 0 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">Shown lit</td></tr>
+<tr><th scope="row" style="text-align: left; font-weight: 600; padding: 14px 12px 14px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Chalk gap appears</th><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">320 ms, after the beams land</td><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">Same curve, opacity only</td><td style="padding: 14px 0 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">Shown</td></tr>
+<tr><th scope="row" style="text-align: left; font-weight: 600; padding: 14px 12px 14px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Press</th><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">160 ms</td><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">Same curve, scale 0.97</td><td style="padding: 14px 0 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">No scale</td></tr>
+<tr><th scope="row" style="text-align: left; font-weight: 600; padding: 14px 12px 14px 0; border-bottom: 1px solid rgba(237,233,226,0.14)">Hover</th><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">150 ms</td><td style="padding: 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)"><code>ease</code>, colour only, pointer devices</td><td style="padding: 14px 0 14px 12px; border-bottom: 1px solid rgba(237,233,226,0.14)">Unchanged</td></tr>
+</tbody>
+</table>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2080}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

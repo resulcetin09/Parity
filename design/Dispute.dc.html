@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parity: anonymous dispute</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A0A0C;color:#EDE9E2;font-family:"Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:#E8A64A}
+::selection{background:rgba(232,166,74,0.35);color:#FFFFFF}
+a{color:#EDE9E2;text-underline-offset:0.22em;text-decoration-thickness:1px;text-decoration-color:rgba(237,233,226,0.45)}a:hover{color:#FFFFFF;text-decoration-color:#E8A64A}
+:focus-visible{outline:2px solid #E8A64A;outline-offset:3px}
+input:focus-visible{outline-offset:1px;border-color:#E8A64A}
+.btn{cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active:not(:disabled){transform:scale(0.97)}
+@media (hover:hover) and (pointer:fine){.btn-spike-solid:hover{background:#C9473B}}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color 150ms ease}.btn:active:not(:disabled){transform:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 18px 20px 28px; background: #0A0A0C; color: #EDE9E2; font-family: 'Hanken Grotesk', system-ui, sans-serif; display: flex; flex-direction: column; gap: 20px">
+
+<header style="display: flex; align-items: center; gap: 6px">
+<a href="Check.dc.html" aria-label="Back to my record" style="width: 44px; height: 44px; margin-left: -12px; display: flex; align-items: center; justify-content: center">
+<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="#EDE9E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<span style="font-size: 15px; color: #B9B3A8">Your 2026 record</span>
+</header>
+
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 46px; line-height: 0.92; font-weight: 900">Dispute it, anonymously</h1>
+
+<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 2px">
+<legend style="font-size: 15px; font-weight: 600; margin-bottom: 8px">What is wrong?</legend>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 16px"><input type="radio" name="d-w" checked style="width: 22px; height: 22px; accent-color: #E8A64A">Pay amount</label>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 16px"><input type="radio" name="d-w" style="width: 22px; height: 22px; accent-color: #E8A64A">Category of work</label>
+<label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 16px"><input type="radio" name="d-w" style="width: 22px; height: 22px; accent-color: #E8A64A">Recorded gender</label>
+</fieldset>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="d-pay" style="font-size: 15px; font-weight: 600">Average monthly pay on your payslips</label>
+<input id="d-pay" inputmode="decimal" value="€3,050" style="height: 52px; padding: 0 14px; background: #141417; border: 1px solid rgba(237,233,226,0.22); border-radius: 2px; font: inherit; font-size: 16px; color: #EDE9E2">
+<span style="font-size: 13px; color: #8E887E">Stays on this phone. The dispute only says the amount is wrong.</span>
+</div>
+
+<div style="padding: 18px 20px; background: #141417; border-radius: 14px; display: flex; flex-direction: column; gap: 8px">
+<strong style="font-size: 15px">What your employer sees</strong>
+<span style="font-size: 14px; line-height: 1.55; color: #B9B3A8">Someone with a valid 2026 payslip disputes a pay amount. Not your name, not your record, not your figure. One dispute per report.</span>
+</div>
+
+<button type="button" class="btn btn-spike-solid" style="margin-top: auto; height: 54px; background: #E4574A; color: #0A0A0C; border: none; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 700">File anonymous dispute</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

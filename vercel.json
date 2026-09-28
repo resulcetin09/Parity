@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run setup:compact && npm run compile && npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
+}

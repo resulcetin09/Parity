@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.tools/
+public/contract/
+.env
+.env.local
+.vercel
+test-results/
+playwright-report/
+*.tsbuildinfo
+.DS_Store
+# Private material: organizer files, payroll inputs, employee packets.
+.secrets/
+*.organizer.json
+*.employee.json
+*.payroll.csv
+# Local impeccable state that is not shared
+.impeccable/review/
+.impeccable/config.local.json
+.impeccable/questions/

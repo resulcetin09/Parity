@@ -141,9 +141,19 @@ export function Hr({ session }: { session: Session }) {
             );
           })}
         </ol>
-        <a href={reportLink} style={{ fontWeight: 600 }}>
-          Open the public report
-        </a>
+        <div className="actions" style={{ alignItems: "center" }}>
+          <button
+            type="button"
+            className="btn btn-line btn-sm"
+            disabled={!!session.busy}
+            onClick={() => refresh(file).catch((e) => setError(safeError(e)))}
+          >
+            Refresh from Preview
+          </button>
+          <a href={reportLink} style={{ fontWeight: 600 }}>
+            Open the public report
+          </a>
+        </div>
       </aside>
 
       <section className="stack">

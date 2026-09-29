@@ -6,6 +6,8 @@
 
 > **Status: prototype.** Parity runs on Midnight Preview, a test network, and has not been audited. All figures shown without a live contract come from a fictional employer, Halden & Roe, and are labelled as samples.
 
+**Live app:** https://parity-roan.vercel.app · [the deployed report on Preview](https://parity-roan.vercel.app/#/report?c=d5b5dcd1eb5b283488820ab2e71061ccf6715fc7a1ddfc8e7c6af1d9b0e2304c)
+
 Rise In, New Moon to Full, Level 3.
 
 ## Deployed contract
@@ -13,6 +15,7 @@ Rise In, New Moon to Full, Level 3.
 | | |
 | --- | --- |
 | Network | Midnight **Preview** |
+| Live report | https://parity-roan.vercel.app/#/report?c=d5b5dcd1eb5b283488820ab2e71061ccf6715fc7a1ddfc8e7c6af1d9b0e2304c |
 | Contract address | `d5b5dcd1eb5b283488820ab2e71061ccf6715fc7a1ddfc8e7c6af1d9b0e2304c` |
 | Report | Halden & Roe (fictional), period 2026: 42 employees registered, 3 categories committed |
 | Dispute | 1 anonymous dispute filed (tx `007d8c09…a68fa0`, block 1,069,464) and resolved |

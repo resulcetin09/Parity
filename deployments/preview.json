@@ -1,0 +1,31 @@
+{
+  "schema": "parity-observed/v1",
+  "network": "preview",
+  "contractAddress": "d5b5dcd1eb5b283488820ab2e71061ccf6715fc7a1ddfc8e7c6af1d9b0e2304c",
+  "period": "2026",
+  "organizerCommitment": "16c8b5cc9f765976adee29efeccc453df168a2bd7a57f823e295583bf6639907",
+  "observedAt": "2026-09-28T22:51:32.633Z",
+  "toolchain": {
+    "compactc": "0.31.1",
+    "compactRuntime": "0.16.0",
+    "ledger": "8.1.0",
+    "midnightJs": "4.1.1",
+    "proofServer": "midnightntwrk/proof-server:8.1.0"
+  },
+  "verifierKeySha256": {
+    "registerEmployees": "2e5835c8f80f5ee636c66b3c4f2e78077947b2d697a509441159c6062761c772",
+    "commitCategory": "74d2cdab249016e17f48d59c5524489a4e770e5355b5f027f875c47e7a4398ea",
+    "openCheckWindow": "63651c6f3c57aecde651efa8982f0a112f4b0ab501d94805d5359f6a9185986c",
+    "fileDispute": "8a330cc749f483c71755d7218844e6e3883704da03619f57612fa867d5c81726",
+    "resolveDispute": "27a21974eeb7803e62ff9caaa8e954b56f761e325f85e9fe5465777e27e5d116",
+    "closeCheckWindow": "0510f16b345f61d40dfe522f5d1cc5ac2460f5108a6b7863e54c8a31331732a0",
+    "publishCategory": "f1686b8e0746f2230ff281f7d662795ef7ebb0044b27393f44df9fdc8c0d7df1"
+  },
+  "action": {
+    "kind": "ContractCall",
+    "txHash": "d59020cdbe96ad055b0b33c5886e4ceaef1563a3f0fd0955bf7ed6f763b2a358",
+    "blockHeight": 1069561,
+    "blockTime": "2026-09-28T22:50:18.000Z",
+    "status": "SUCCESS"
+  }
+}

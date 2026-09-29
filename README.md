@@ -13,8 +13,27 @@ Rise In, New Moon to Full, Level 3.
 | | |
 | --- | --- |
 | Network | Midnight **Preview** |
-| Contract address | _Pending: filled in after the first real deployment._ |
-| Evidence | [`deployments/`](deployments/). Anyone can re-check it with `npm run verify:preview` |
+| Contract address | `d5b5dcd1eb5b283488820ab2e71061ccf6715fc7a1ddfc8e7c6af1d9b0e2304c` |
+| Report | Halden & Roe (fictional), period 2026: 42 employees registered, 3 categories committed |
+| Dispute | 1 anonymous dispute filed (tx `007d8c09…a68fa0`, block 1,069,464) and resolved |
+| Result | Engineering 8.9% gap (6 women, 7 men). Customer support 1.9% (9 women, 6 men). Drivers **withheld** by the circuit (3 women) |
+| Last transaction | `d59020cdbe96ad055b0b33c5886e4ceaef1563a3f0fd0955bf7ed6f763b2a358`, block 1,069,561, `SUCCESS` |
+| Evidence | [`deployments/preview.json`](deployments/preview.json). Re-check with `npm run verify:preview` |
+
+![Terminal: npm run inspect:preview verifying the deployed report](docs/deploy-terminal.png)
+
+Every step ran through the app with Lace on Preview:
+
+1. deploy;
+2. three batches of employee registrations;
+3. three category commitments;
+4. opening the check window;
+5. an employee's on-device check and anonymous dispute;
+6. resolving it;
+7. closing the window;
+8. three category proofs.
+
+The on-chain verifier keys of all seven circuits match `contract/parity.compact`.
 
 ## The problem
 
